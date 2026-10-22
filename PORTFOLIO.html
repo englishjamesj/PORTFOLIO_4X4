@@ -264,6 +264,23 @@
   ul.decisions .qn{ font-family: var(--serif); font-weight: 700; display: block; margin-bottom: 3px; }
   ul.decisions .sub{ font-size: 15px; color: var(--ink-soft); }
 
+  /* ---------- Printing page cost table ---------- */
+  table.pricetable{
+    width: 100%; border-collapse: collapse; margin: 14px 0 18px;
+    background: var(--cream); border: 1px solid var(--line);
+    border-radius: 12px; overflow: hidden; box-shadow: var(--shadow);
+  }
+  table.pricetable th, table.pricetable td{
+    text-align: left; padding: 12px 18px; border-bottom: 1px solid var(--line);
+  }
+  table.pricetable thead th{
+    font-family: var(--sans); font-weight: 700; text-transform: uppercase;
+    letter-spacing: .08em; font-size: 13px; color: var(--accent);
+    background: var(--paper-2);
+  }
+  table.pricetable tbody tr:last-child td{ border-bottom: none; }
+  table.pricetable tbody td:first-child{ font-family: var(--serif); font-weight: 700; }
+
   /* ---------- Next/back affordance ---------- */
   .nav-bottom{
     display: flex; justify-content: space-between; align-items: center;
@@ -837,6 +854,71 @@
 
       <div class="nav-bottom">
         <button class="nav-btn back">◀ Back</button>
+        <button class="nav-btn next">Next ▶</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 12. PRINTING ===================== -->
+  <section class="chapter" id="ch-printing" data-chapter="12">
+    <div class="wrap">
+      <p class="eyebrow">Getting Them Printed</p>
+      <h1>How we'll print the cards</h1>
+      <p class="lead muted">The short version: use an online promotional-card printer, order a healthy
+      batch of each design, and skip the buy-your-own-printer idea. Here's the reasoning and the rough costs.</p>
+
+      <div class="callout green">
+        <p style="margin:0;"><strong>The recommendation.</strong> Print with a standard online card printer
+        such as <strong>GotPrint</strong> (cheapest reputable), <strong>UPrinting</strong> (free file review — a
+        nice safety net), or <strong>GreenerPrinter</strong> (recycled stock, fits the organic story). Spec:
+        2.5&nbsp;&times;&nbsp;3.5&nbsp;in, full color both sides, 14–16&nbsp;pt glossy cover, optional rounded corners.
+        Order <strong>500–1,000 copies of each design</strong>.</p>
+      </div>
+
+      <h3>What a design costs (rough planning estimates)</h3>
+      <p class="muted" style="margin-top:4px;">One design, full color, double-sided, glossy. These are ballpark
+      figures gleaned from printer websites — confirm the exact number before ordering.</p>
+      <table class="pricetable">
+        <thead>
+          <tr><th>Copies of one design</th><th>Likely total</th><th>Per card</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>250</td><td>~$25–45</td><td>~10–18&cent;</td></tr>
+          <tr><td>500</td><td>~$35–60</td><td>~7–12&cent;</td></tr>
+          <tr><td>1,000</td><td>~$50–90</td><td>~5–9&cent;</td></tr>
+        </tbody>
+      </table>
+      <p>Going from 250 to 1,000 copies roughly <strong>halves the price per card</strong> — the extra copies are
+      nearly free, which makes the "hand extras out at a school" idea easy. A full season of ~18 designs at 500 each
+      lands around <strong>$700–1,000 all in</strong>; at 1,000 each, roughly <strong>$1,000–1,700</strong> for twice
+      as many cards.</p>
+
+      <h3>Print the whole season at once?</h3>
+      <p>Mostly worth it — but the savings are <strong>moderate, not huge</strong>. Each weekly design is still its own
+      print job, so the big savings come from ordering more copies <em>per design</em>, not from bundling designs.
+      Placing one combined order does save on shipping (paid once, not ~18 times) and on your time. Smart play:
+      <strong>proof one design first</strong> — order a small test batch, hold it, check the back lines up and the colors
+      look right — <strong>then place one order for the whole season.</strong></p>
+
+      <h3>Local (within ~25 miles)?</h3>
+      <p>Worth a courtesy quote, but don't count on it beating the online shops. <strong>Arkansas Card Co.</strong>
+      is an Arkansas-based company that does exactly this kind of custom card work and is worth a quick quote email
+      (they don't publish prices). Established Fayetteville shops like <strong>Arcom Printing Plus</strong> and
+      <strong>A&amp;B Reprographics</strong> are capable but quote-only, and typically match or exceed online pricing.
+      The trade-off: local means supporting an Arkansas business and easier hands-on proofing; online means the best
+      price and a product built specifically for trading cards.</p>
+
+      <div class="callout">
+        <p style="margin:0;"><strong>Buying our own printer?</strong> Not worth it. At our volumes it costs
+        <em>more</em> per card than the pros, can't line up the front and back cleanly, and the cards come out
+        flimsier than kids expect — it just doesn't compete on quality or price.</p>
+      </div>
+
+      <p class="muted" style="font-size:15px;">Prices are approximate, gathered from printer websites in late 2025 /
+      2026, and will vary with finish, turnaround, and shipping. Always confirm a live quote before ordering.</p>
+
+      <div class="nav-bottom">
+        <button class="nav-btn back">◀ Back</button>
         <button class="nav-btn next" disabled>Next ▶</button>
       </div>
     </div>
@@ -857,6 +939,7 @@
   <button class="tab" data-go="9"><span class="num">9</span>Series Plan</button>
   <button class="tab" data-go="10"><span class="num">10</span>Candidates</button>
   <button class="tab" data-go="11"><span class="num">11</span>Your Call</button>
+  <button class="tab" data-go="12"><span class="num">12</span>Printing</button>
 </nav>
 
 <script>
